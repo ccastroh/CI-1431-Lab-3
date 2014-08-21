@@ -22,6 +22,7 @@ public class AsciiArt {
     
     public void arte970836() throws IOException {
     	imprimir("res/970836.txt");
+        // OJO UN CAMBIO
     }
     
     public static void main(String[] args) {
