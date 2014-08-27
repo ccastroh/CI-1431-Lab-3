@@ -1,0 +1,47 @@
+import java.util.Random;
+import java.util.Arrays;
+import java.util.HashSet;
+/*
+* @author Estudiante Programación 1
+* 1-2014 UCR
+*/
+public class Vector{
+    static int v[];
+    
+    public Vector(){
+        v = new int[10];        
+    }
+
+    public static void llenarVector(int v[]){
+        Random r = new Random();
+        for(int i = 0; i < v.length; i++){
+            v[i] = r.nextInt(100);
+        }
+    }
+
+/*
+* @param int vector[] vector del que vamos a copiar
+* @return boolean True cuando el tamaño del vector es igual al del hash
+*/
+    public static boolean duplicados(int vector[]){
+        boolean duplicado = false;
+        Integer [] vectorNuevo = new Integer[vector.length];
+        for(int i = 0 ; i < vector.length ; i++){
+            vectorNuevo[i] = Integer.valueOf(vector[i]);
+        }
+        HashSet hash = new HashSet<Integer>(Arrays.asList(vectorNuevo));;
+        duplicado =  vector.length != hash.size();
+        System.out.println(vector.length != hash.size());
+        return duplicado;
+    }
+        
+/*
+* Main del programa, se crea un vector, luego se llena y por último
+* se duplica.
+*/
+    public static void main(String [] args){
+        Vector vector = new Vector();
+        vector.llenarVector(v);
+        vector.duplicados(v);
+    }
+}
