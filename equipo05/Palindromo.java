@@ -1,8 +1,8 @@
 /*
 * No hecho por Andony
 */
-public class Palindromo
-{
+public class Palindromo{
+
     public static boolean esPalindromo(String texto){
       texto.trim();
       texto = texto.toLowerCase();
