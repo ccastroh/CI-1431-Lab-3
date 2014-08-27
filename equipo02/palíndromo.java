@@ -1,3 +1,4 @@
+
 public class Palíndromo{
 
     public static boolean palindromo(String texto) {
@@ -35,3 +36,4 @@ public class Palíndromo{
         }//final for
     }//final pruebaPalindromo
 }//final de la clase
+
