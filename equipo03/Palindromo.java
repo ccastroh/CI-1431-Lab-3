@@ -1,20 +1,22 @@
-
-public class Palindromo
-{
+public class Palindromo{
     
-    public static boolean palindromo(String texto) 
-    {
+    /**
+     * Se espera un recibir una palabra 
+     * la cual se verificara si es es un 
+     * palindromo en tal caso se retorna un verdadero
+     * de lo contrario se retorna un falso.
+    */
+    public static boolean palindromo(String texto){
        texto = texto.trim();
        int longitud = texto.length(); 
        String textoInverso ="";
           
            for (int i= 0; i<longitud; i++) {
-               textoInverso=textoInverso+texto.charAt(longitud-1-i);
+               textoInverso += texto.charAt(longitud-1-i);
             }
            
            if (texto.equalsIgnoreCase(textoInverso)) {
                return true;
-               
             }
             
       
@@ -33,6 +35,4 @@ public class Palindromo
             
         }
     }
-   
 }
-    
