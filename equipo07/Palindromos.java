@@ -1,51 +1,45 @@
-public class Palindromos
-{
+public class Palindromos {
    
-   public static boolean palindromo(String texto)
-   {
-       String t = texto.trim();
-       char d[] = t.toCharArray();
-       String c[] = new String [d.length] ;
+   public static boolean palindromo(String texto) {
+       String textoSinEspacios = texto.trim();
+       char textoComoArray[] = textoSinEspacios.toCharArray();
+       String textoNuevo[] = new String [textoComoArray.length] ;
        
        int j = 0;
-       while (j < d.length)
-       {
-        c[j] += d[j];
+       while (j < textoComoArray.length) {
+        textoNuevo[j] += textoComoArray[j];
         j++;
        }
        
        int i = 0;
-       boolean f = true;
+       boolean esPalindromo = true;
        
-       while ((i < (c.length + 1)/2) && (f == true))
-       {
-          String s1 = c[i];
-          String s2 = c[c.length - i - 1];
+       while ((i < (textoNuevo.length + 1)/2) && (esPalindromo == true)) {
+          String letra1 = textoNuevo[i];
+          String letra2 = textoNuevo[textoNuevo.length - i - 1];
           
-          if (s1.equalsIgnoreCase(s2))
+          if (letra1.equalsIgnoreCase(letra2))
           {
-           f = true;
+           esPalindromo = true;
           } else {
-           f = false;
+           esPalindromo = false;
           }
           i++;
        }
        
-       return f;
+       return esPalindromo;
    }
    
-   public static void pruebaPalindromo() 
-   {
+   public static void pruebaPalindromo() {
        String pruebas[] = {"reconocer ", " Radar", "ABBA ", "Carlos", "ABC"};
        
-       for (String p : pruebas) 
-       {
+       for (String p : pruebas) {
           System.out.print("La hilera: " + "\""  + p + "\"");
           if (palindromo(p)) 
           {
-           System.out.println(" SI es un palíndromo");
+           System.out.println("SÍ es un palíndromo");
           } else {
-           System.out.println(" NO es un palíndromo");
+           System.out.println("NO es un palíndromo");
           }
        }
    }
