@@ -1,8 +1,7 @@
 import java.util.Random;
 import java.util.Arrays;
 
-public class Duplicados
-{
+public class Duplicados{
     
     public static void  llenarNumeros(int v[]) {
        
