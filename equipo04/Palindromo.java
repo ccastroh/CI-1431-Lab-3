@@ -15,6 +15,7 @@ public class Palindromo
             vectorT2[j] = vectorT[i];
 			j++;
         }
+		
         String  hileraConvertido = String.valueOf(vectorT2);
         
         boolean comparacion = copiaHilera.equalsIgnoreCase(hileraConvertido);
