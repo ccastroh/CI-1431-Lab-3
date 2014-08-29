@@ -2,20 +2,21 @@
 public class Palindromo
 {
     public static boolean esPalindromo(String texto){
-        String t = texto;
+        String hilera = texto;
         boolean palindromo = false;
-        String t2 = t.trim();
+        String copiaHilera = texto;
    
-        char[] vectorT = t2.toCharArray();
+        char[] vectorT = copiaHilera.toCharArray();
         int size = vectorT.length;
         char[] vectorT2 = new char[size];
+		int j = 0;
         for( int i = size-1; i >= 0; i--){
-            int j = 0;
+            
             vectorT2[j++] = vectorT[i];
         }
-        String t3 = String.valueOf(vectorT2);
+        String  hileraConvertido = String.valueOf(vectorT2);
         
-        boolean comparacion = t2.equalsIgnoreCase(t3);
+        boolean comparacion = copiaHilera.equalsIgnoreCase(hileraConvertido);
         
         if( comparacion ){
             palindromo = true;
