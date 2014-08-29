@@ -22,8 +22,6 @@ public class Palindromo
         if( comparacion ){
             palindromo = true;
         }
-		
-		
         
         return palindromo;
     }
@@ -38,5 +36,7 @@ public class Palindromo
                 System.out.println(" NO es un palíndromo");
             }
         }
+		
+		
     }
 }
