@@ -12,7 +12,8 @@ public class Palindromo
 		int j = 0;
         for( int i = size-1; i >= 0; i--){
             
-            vectorT2[j++] = vectorT[i];
+            vectorT2[j] = vectorT[i];
+			j++;
         }
         String  hileraConvertido = String.valueOf(vectorT2);
         
