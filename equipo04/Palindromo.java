@@ -22,13 +22,14 @@ public class Palindromo
         if( comparacion ){
             palindromo = true;
         }
+		
+		
         
         return palindromo;
     }
     
     public static void pruebaPalindromo(){
         String pruebas[] = {"reconocer ", " Radar", "ABBA", "Carlos", "ABC"};
-        
         for(String p : pruebas) {
             System.out.println("La hilera: " + p );
             if(esPalindromo(p)) {
