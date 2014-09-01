@@ -46,19 +46,19 @@ public class VecRep
      *Pruebas para verificar que el método duplicados funcione correctamente.
      */
     public static void prueba(){
-            int[] aleatorio1 = new int[3];
-            int[] aleatorio2 = new int[10];
-            int[] sinRepetir ={5,3,6,2,9};
-            int[] conRepetir ={5,3,6,2,3};
-            llenarVector(aleatorio1);
-            llenarVector(aleatorio2);
-            imprimir("Primer vector aleatorio", aleatorio1);
-            System.out.println("\nRepetición de elementos: "+ duplicados(aleatorio1));
-            imprimir("\nSegundo vector aleatorio", aleatorio2);
-            System.out.println("\nRepetición de elementos: "+duplicados(aleatorio2));
-            imprimir("\nVector sin elementos repetidos", sinRepetir);
-            System.out.println("\nRepetición de elementos: "+duplicados(sinRepetir));
-            imprimir("\nVector sin elementos repetidos",conRepetir);
-            System.out.println("\nRepetición de elementos: "+duplicados(conRepetir));
+        int[] aleatorio1 = new int[3];
+        int[] aleatorio2 = new int[10];
+        int[] sinRepetir ={5,3,6,2,9};
+        int[] conRepetir ={5,3,6,2,3};
+        llenarVector(aleatorio1);
+        llenarVector(aleatorio2);
+        imprimir("Primer vector aleatorio", aleatorio1);
+        System.out.println("\nRepetición de elementos: "+ duplicados(aleatorio1));
+        imprimir("\nSegundo vector aleatorio", aleatorio2);
+        System.out.println("\nRepetición de elementos: "+duplicados(aleatorio2));
+        imprimir("\nVector sin elementos repetidos", sinRepetir);
+        System.out.println("\nRepetición de elementos: "+duplicados(sinRepetir));
+        imprimir("\nVector sin elementos repetidos",conRepetir);
+        System.out.println("\nRepetición de elementos: "+duplicados(conRepetir));
     }
 }
