@@ -1,0 +1,69 @@
+import java.util.Random;
+
+public class VecRep{
+
+    /*
++     * Busca si hay valores duplicados en un vector.
++     */
+    public static boolean duplicados(int[] ent){
+        int[] aux = new int[ent.length];
+        for(int i=0; i<ent.length; i++){
+            aux[i] = ent[i];
+        }
+        
+        for(int j=0; j<ent.length; j++){
+            for (int h=0; h<ent.length; h++){
+                if(h!=j){
+                    if( aux[h] == ent[j]){
+                        return true;
+                    }
+                }
+            }
+            
+        }
+    return false;
+    }
+    
+     /*
++     * Llena un vector con valores aleatorios.
++     */
+    public static void llenarVector (int v[]){
+        Random r = new Random();
+        for (int i=0; i<v.length; i++){
+            v[i] = r.nextInt(100);
+        }
+    }
+    
+    /*
++    * Imprime un vector.
++    */
++    public void imprimir(String s, int[] vector){
++        System.out.println(s);
++        for(int x : vector){
++            System.out.print(x +" ");
++        }
++    }
++    
++    /*
++     *Pruebas para verificar que el método duplicados funcione correctamente.
++     */
+    public static void prueba(){
+            int[] aleatorio1 = new int[3];
+            int[] aleatorio2 = new int[10];
+            int[] sinRepetir ={5,3,6,2,9};
+            int[] conRepetir ={5,3,6,2,3};
+            llenarVector(aleatorio1);
+            llenarVector(aleatorio2);
+            imprimir("Primer vector aleatorio", aleatorio1);
+            System.out.println("\nRepetición de elementos: "+ duplicados(aleatorio1));
+            
+            imprimir("\nSegundo vector aleatorio", aleatorio2);
+            System.out.println("\nRepetición de elementos: "+duplicados(aleatorio2));
+            
+            imprimir("\nVector sin elementos repetidos", sinRepetir);
+            System.out.println("\nRepetición de elementos: "+duplicados(sinRepetir));
+            
+            imprimir("\nVector con elementos repetidos", conRepetir)
+            System.out.println("\nRepetición de elementos: "+duplicados(conRepetir));
+    }
+}
