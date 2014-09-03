@@ -5,17 +5,18 @@ public class Palindromo{
         StringBuffer aux = new StringBuffer();
         
         for(int i=texto.length()-1; i>=0; i--){
-        aux.append(texto.charAt(i));
+			aux.append(texto.charAt(i));
         }
         
         String s = aux.toString();
         resultado =texto.equalsIgnoreCase(s);
-        return resultado;
-    
-    
-    
+        return resultado;   
     }
     
+	/*
+	* El siguiente método se encarga de reconocer hileras que 
+	* sean palíndromas.
+ 	*/
     public static void pruebaPalindromo(){
         
         String pruebas[] ={"reconocer","Radar","ABBA","Carlos","ABC"};
